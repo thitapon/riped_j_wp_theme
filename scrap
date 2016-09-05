@@ -1,0 +1,141 @@
+// Add Customizer menu
+function wpb_customize_menu( $wp_customize ){
+
+  $wp_customize -> add_section('header_image', array(
+    'title'     =>    __('Header Image', 'RIPED-J-THEME')
+  ));
+
+  $wp_customize -> add_setting('header_image', array(
+    'default'     =>  get_Bloginfo( 'template_directory' ).'/img/header_default.jpg',
+    'type'        =>  'theme_mod'
+  ));
+
+  $wp_customize -> add_control(new WP_Customize_Image_Control($wp_customize, 'header_image', array(
+    'label'       =>    __('Header Image','RIPED-J-THEME'),
+    'section'     =>  'header_image',
+    'settings'    =>  'header_image'
+  )));
+
+}
+
+add_action('customize_register', 'wpb_customize_menu')
+
+
+<!-- Header image -->
+<?php if ( get_header_image() ) : ?>
+<div id="site-header">
+  <img src="<?php header_image(); ?>" width=100% alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+</div>
+<?php endif; ?>
+
+min-height:28px;
+margin-top: 0px;
+margin-bottom: 0px;
+
+.navbar-xs .container-fluid{
+  min-height: 28px;
+  height: 28px;
+}
+
+<div class="navbar-header">
+
+</div> <!-- navbar header -->
+
+
+
+
+
+
+
+
+.navbar{}
+border: 0px;
+border-radius: 0px;
+}
+
+.navbar .navbar-brand{
+padding: 0px 0px;
+font-size: 14px;
+line-height: 28px;
+}
+
+.navbar-xs {
+  height: 28px;
+  min-height: 28px;
+  border: 0;
+  border-radius: 0;
+}
+
+.navbar-xs .navbar-brand{
+  padding: 0px 0px;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.navbar-xs .navbar-nav > li > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 28px;
+  font-size: 12px;
+}
+
+.navbar-nav .navbar-right {float: right !important;}
+
+
+@media(max-width:767px)
+{
+    .navbar-nav .navbar-right {margin-right:20px;}
+    .navbar-header:after
+    {
+    clear: none;
+    }
+    .navbar-nav.navbar-right > li { float: left; }
+
+    .navbar-collapse:before {clear:both;}
+
+    .navbar-collapse {overflow-y: hidden;}
+    .navbar-collapse.in {overflow-y: visible;}
+    .navbar{border-color: #101010; border-width: 0 0 1px;}
+    .navbar-collapse.in > ul {border-color: #101010; border-top:1px double;}
+}
+
+<img src="<?php header_image(); ?>" height = "<?php echo get_custom_header()->height; ?>" width = "<?php echo get_custom_header()->width; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+
+// Add header customization
+
+function riped_j_custom_header_setup(){
+  // Register custom header image
+  $args = array(
+  	'width'         => 1000,
+  	'height'        => 100,
+  	'default-image' => get_template_directory_uri() . '/img/header_default.jpg',
+  	'uploads'       => true,
+    'flex-height'   => true,
+  	'flex-width'    => true,
+    'header-text'   => true,
+  );
+  add_theme_support( 'custom-header', $args );
+}
+add_action('after_setup_theme', 'riped_j_custom_header_setup');
+
+<!-- Header image -->
+<?php if ( get_header_image() ) : ?>
+  <style>
+    #header{
+      background-image: url("<?php header_image() ?>")
+    }
+  </style>
+<div class="container-fluid" id="header">
+  <div class = "row">
+    <div class="col-xs-12 transparent-text">
+      <h4>a</h4>
+    </div> <!-- col-xs-12 -->
+    <div class="col-xs-12">
+      <h2> Test </h2>
+    </div> <!-- col-xs-12 -->
+    <div class="col-xs-12 transparent-text">
+      <h4>a</h4>
+    </div> <!-- col-xs-12 -->
+  </div> <!-- row -->
+</div>
+<?php endif; ?>

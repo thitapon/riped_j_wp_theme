@@ -1,0 +1,253 @@
+/*
+Theme Name: RIPED-J-THEME
+Author: Thitapon Ousawat
+Author URI: http://riped.utcc.ac.th/thitapon/
+Description: Test theme for Dr. Thitapon at RIPED using Bootstrap
+Version: 0.1
+*/
+
+/*
+colors:
+light blue (utcc): #1ebbe6
+Bright yellow (utcc): #fffb00
+Light grey: #f5f5f5
+Navy blue (utcc): rgb(47, 51, 142), #2f338e
+Light bluish grey: rgb(213, 243, 253)
+Ocean green (riped): #00e6b8
+Grey: #999999
+*/
+
+/* Main body default styles */
+body {
+  font-family: 'Prompt', sans-serif;
+  padding-top: 6em;
+}
+
+/* Text styles */
+.blog-post-title{
+  margin-bottom: 5px;
+  margin-top: 0;
+  padding-top: 1em;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #999999
+}
+
+.blog-post-meta{
+  margin-bottom: 10px;
+  font-size: 0.8em;
+}
+
+.blog-main{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-title{
+  padding-top: 1em;
+  padding-bottom: 2px;
+  margin-bottom: 0px;
+  margin-top: 0;
+}
+.page-meta{
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.sidebar-module{
+  padding-top: 1em;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-size: 100%
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar style */
+.navbar{
+border: 0px;
+border-radius: 0px;
+margin-bottom: 0;
+margin-top: 1.93em; /* for problem with very small gap between menus */
+}
+
+.navbar-nav{
+  margin: 0;
+}
+
+.navbar .navbar-brand{
+padding: 0px 0px;
+}
+
+.navbar .navbar-nav > li > a {
+  font-size: 1.2em;
+}
+
+
+.navbar .navbar-nav > li > a:hover {
+  font-size: 1.2em;
+}
+
+.navbar .navbar-nav > li.active > a {
+  font-size: 1.2em;
+}
+
+.navbar-xs .navbar-inner .container-fluid{
+  max-height: 2em;
+}
+
+.navbar-xs {
+  height: 2em;
+  min-height: 2em;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-xs .navbar-brand{
+  padding: 0px 0px;
+  line-height: 2em;
+}
+
+.navbar-xs .navbar-header{
+  max-height: 2em;
+}
+
+.navbar-xs .navbar-nav > li > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 2em;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.navbar-xs .navbar-nav > li > a:hover {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 2em;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#bs-navbar-2{
+  max-height: 2em;
+  min-height: 0;
+  margin: 0;
+}
+
+#header-main-menu{
+  border: 0px;
+  border-radius: 0px;
+}
+
+#header-main-menu button{
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+
+#left-col-menu-1{
+  padding-top: 1em;
+}
+
+#left-col-menu-1 ul li {
+  width: 8em;
+}
+
+#left-col-menu-1 ul ul{
+  width: 8em;
+}
+
+#left-col-menu-1 ul ul li{
+  width: 8em;
+}
+
+#footer-tab{
+  padding-top: 2em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+
+}
+
+.blog-post-thumbnail img{
+  width: 100%;
+  height: auto;
+  margin-bottom: 3em;
+}
+
+.blog-sidebar{
+  padding-right: 0;
+}
+
+ul.pagination li.active span{
+  border-color: #999999;
+}
+
+ul.pagination li.disabled span{
+  border-color: #999999;
+}
+
+ul.pagination li > a{
+  border-color: #999999;
+}
+
+div.pagination .btn{
+  border-color: #999999;
+}
+
+.left-col-menu button{
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+
+.left-col-menu ul ul{
+  top: 0;
+  left: 100%;
+}
+
+ul.nav-pills li a{
+  border-radius: 0;
+}
+
+.left-col-menu{
+  min-height: 3em;
+  padding-bottom: 1em;
+}
+
+.left-col-menu .navbar-toggle{
+  border-color: #999999;
+  margin-right: 0;
+}
+
+.showcase{
+height: 600px;
+
+
+}
+
+footer .col-xs-12{
+  padding:0;
+}
+
+footer .row{
+  width: 100%;
+}
+
+#front-img{
+  padding-top: 2em;
+  padding-left: 1em;
+  padding-bottom: 3em;
+  padding-right: 1em;
+}
+
+#front-img img{
+  width: 250px;
+  height:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
